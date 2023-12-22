@@ -1,4 +1,6 @@
-# React + Vite
+# Todo list with React + Vite and Redux toolkit
+
+for Technical Assignment (Todo list) - Front end WEB Development Bootcamp PI 2023
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
