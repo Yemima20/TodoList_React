@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect, useDispatch, useSelector } from "react-redux";
 import { toggleTask, deleteTask, editTask } from "../features/createSlice";
+import "../App.css";
 
 const TodoList = () => {
   const tasks = useSelector((state) => state.todo) || [];
@@ -52,7 +53,7 @@ const TodoList = () => {
       <ul>
         {/* show all tasks */}
         {filteredTodos().map((task) => (
-          <li key={task.id} className="mb-1">
+          <li key={task.id} className="mb-1 ml-10">
             {/* checkbox */}
             <input
               type="checkbox"
@@ -63,7 +64,7 @@ const TodoList = () => {
 
             {/* edit task */}
             {editingId === task.id ? (
-              <>
+              <div className="flex justify-center items-center ml-3">
                 <input
                   className="mx-12 min-w-96 rounded-md h-9 px-2"
                   type="text"
@@ -82,7 +83,7 @@ const TodoList = () => {
                 >
                   ✔
                 </button>
-              </>
+              </div>
             ) : (
               // display tasks if not in editing mode
               <p
